@@ -85,6 +85,20 @@ declare module 'node-quickbooks' {
     updatePurchase(purchaseData: object, callback: (err: any, purchase: any) => void): void;
     deletePurchase(idOrEntity: any, callback: (err: any, response: any) => void): void;
 
+    // Deposit CRUD
+    findDeposits(options: object, callback: (err: any, deposits: any) => void): void;
+    createDeposit(depositData: object, callback: (err: any, deposit: any) => void): void;
+    getDeposit(id: string, callback: (err: any, deposit: any) => void): void;
+    updateDeposit(depositData: object, callback: (err: any, deposit: any) => void): void;
+    deleteDeposit(idOrEntity: any, callback: (err: any, response: any) => void): void;
+
+    // Payment CRUD (Receive Payment)
+    findPayments(options: object, callback: (err: any, payments: any) => void): void;
+    createPayment(paymentData: object, callback: (err: any, payment: any) => void): void;
+    getPayment(id: string, callback: (err: any, payment: any) => void): void;
+    updatePayment(paymentData: object, callback: (err: any, payment: any) => void): void;
+    deletePayment(idOrEntity: any, callback: (err: any, response: any) => void): void;
+
     // You can add more methods as needed
   }
 }
